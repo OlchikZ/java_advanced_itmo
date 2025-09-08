@@ -1,13 +1,11 @@
 package ru.itmo.javaadvanced.lesson2.service;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
-@Scope("singleton")
 public class RomanConverterService {
 
     private static final Map<Character, Integer> romanMap = new HashMap<>();
