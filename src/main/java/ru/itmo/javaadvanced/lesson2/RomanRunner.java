@@ -2,13 +2,14 @@ package ru.itmo.javaadvanced.lesson2;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import ru.itmo.javaadvanced.lesson2.service.RomanConverterService;
 
 @Component
 public class RomanRunner implements CommandLineRunner {
 
-    private final ru.itmo.javaadvanced.lesson2.RomanConverterService service;
+    private final RomanConverterService service;
 
-    public RomanRunner(ru.itmo.javaadvanced.lesson2.RomanConverterService service) {
+    public RomanRunner(RomanConverterService service) {
         this.service = service;
     }
 

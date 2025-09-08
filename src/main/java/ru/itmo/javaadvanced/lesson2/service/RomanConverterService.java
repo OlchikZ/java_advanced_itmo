@@ -1,4 +1,4 @@
-package ru.itmo.javaadvanced.lesson2;
+package ru.itmo.javaadvanced.lesson2.service;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
