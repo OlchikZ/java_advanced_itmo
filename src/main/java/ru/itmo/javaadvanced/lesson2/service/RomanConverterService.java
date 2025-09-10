@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class RomanConverterService {
+public class RomanConverterService implements RomanConverter {
 
     private static final Map<Character, Integer> romanMap = new HashMap<>();
 
@@ -20,6 +20,7 @@ public class RomanConverterService {
         romanMap.put('M', 1000);
     }
 
+    @Override
     public int romanToInt(String s) {
         int sum = 0;
         int prev = 0;

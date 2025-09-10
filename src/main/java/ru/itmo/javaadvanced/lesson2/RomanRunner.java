@@ -1,17 +1,15 @@
 package ru.itmo.javaadvanced.lesson2;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import ru.itmo.javaadvanced.lesson2.service.RomanConverterService;
+import ru.itmo.javaadvanced.lesson2.service.RomanConverter;
 
 @Component
+@RequiredArgsConstructor
 public class RomanRunner implements CommandLineRunner {
 
-    private final RomanConverterService service;
-
-    public RomanRunner(RomanConverterService service) {
-        this.service = service;
-    }
+    private final RomanConverter service;
 
     @Override
     public void run(String... args) {
