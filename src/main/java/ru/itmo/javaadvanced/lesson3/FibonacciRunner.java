@@ -1,5 +1,6 @@
 package ru.itmo.javaadvanced.lesson3;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import ru.itmo.javaadvanced.lesson3.service.FibonacciService;
@@ -7,13 +8,10 @@ import ru.itmo.javaadvanced.lesson3.service.FibonacciService;
 import java.util.Scanner;
 
 @Component
+@RequiredArgsConstructor
 public class FibonacciRunner implements CommandLineRunner {
 
     private final FibonacciService service;
-
-    public FibonacciRunner(FibonacciService service) {
-        this.service = service;
-    }
 
     @Override
     public void run(String... args) {
