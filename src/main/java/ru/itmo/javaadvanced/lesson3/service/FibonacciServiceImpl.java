@@ -32,7 +32,6 @@ public class FibonacciServiceImpl implements FibonacciService {
         } else if (n == 1) {
             result = 1;
         } else {
-            // ⚡ Оптимизированный итеративный алгоритм
             long a = 0, b = 1;
             for (int i = 2; i <= n; i++) {
                 long tmp = a + b;
