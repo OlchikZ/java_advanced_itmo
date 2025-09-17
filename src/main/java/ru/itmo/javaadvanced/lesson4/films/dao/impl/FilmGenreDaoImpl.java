@@ -1,8 +1,9 @@
-package ru.itmo.javaadvanced.lesson4.films.dao;
+package ru.itmo.javaadvanced.lesson4.films.dao.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import ru.itmo.javaadvanced.lesson4.films.dao.FilmGenreDao;
 
 @Repository
 @RequiredArgsConstructor

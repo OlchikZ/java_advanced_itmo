@@ -1,9 +1,10 @@
-package ru.itmo.javaadvanced.lesson4.films.dao;
+package ru.itmo.javaadvanced.lesson4.films.dao.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import ru.itmo.javaadvanced.lesson4.films.dao.GenreDao;
 import ru.itmo.javaadvanced.lesson4.films.model.Genre;
 
 import java.util.List;

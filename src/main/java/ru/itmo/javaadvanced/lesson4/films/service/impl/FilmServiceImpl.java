@@ -1,9 +1,10 @@
-package ru.itmo.javaadvanced.lesson4.films.service;
+package ru.itmo.javaadvanced.lesson4.films.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.itmo.javaadvanced.lesson4.films.dao.FilmDao;
 import ru.itmo.javaadvanced.lesson4.films.model.Film;
+import ru.itmo.javaadvanced.lesson4.films.service.FilmService;
 
 import java.util.List;
 import java.util.Optional;
