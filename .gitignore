@@ -1,4 +1,15 @@
-.idea
-target
-out
-.iml
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven / Gradle build
+target/
+out/
+build/
+
+# Логи
+*.log
+
+# Системные файлы
+.DS_Store
+Thumbs.db
