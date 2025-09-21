@@ -1,7 +1,10 @@
 package ru.itmo.javaadvanced.lesson5.service;
 
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.itmo.javaadvanced.lesson5.model.Film;
 import ru.itmo.javaadvanced.lesson5.model.Genre;
@@ -21,10 +24,18 @@ public class FilmService {
         return filmRepo.save(film);
     }
 
+    @Transactional(readOnly = true)
     public List<Film> getAll() {
         return filmRepo.findAll();
     }
 
+    @Transactional(readOnly = true)
+    public Page<Film> getAllPaged(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return filmRepo.findAll(pageable);
+    }
+
+    @Transactional(readOnly = true)
     public Film getById(Integer id) {
         return filmRepo.findById(id).orElse(null);
     }

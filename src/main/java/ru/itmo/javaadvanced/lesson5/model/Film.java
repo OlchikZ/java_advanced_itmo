@@ -1,7 +1,11 @@
 package ru.itmo.javaadvanced.lesson5.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +21,10 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title_ru", nullable = false)
+    @Column(name = "title_ru")
     private String titleRu;
 
-    @Column(name = "title_en", nullable = false)
+    @Column(name = "title_en")
     private String titleEn;
 
     private Integer year;
