@@ -1,4 +1,4 @@
-package ru.itmo.javaadvanced.lesson6.films.exception;
+package ru.itmo.javaadvanced.lesson6.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
