@@ -4,16 +4,15 @@ spring:
     username: user
     password: password
     driver-class-name: org.postgresql.Driver
-  sql:
-    init:
-      mode: always
-      schema-locations: classpath:schema.sql
 
   jpa:
     hibernate:
       ddl-auto: validate
     show-sql: true
     generate-ddl: false
+
+  liquibase:
+    change-log: classpath:db-migrations/changelog/changelog-master.xml
 
 logging:
   level:

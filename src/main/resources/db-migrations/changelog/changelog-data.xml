@@ -1,0 +1,33 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+
+    <changeSet id="4" author="ozakharova">
+        <insert tableName="genres">
+            <column name="name_ru" value="Комедия"/>
+            <column name="name_en" value="Comedy"/>
+        </insert>
+        <insert tableName="genres">
+            <column name="name_ru" value="Драма"/>
+            <column name="name_en" value="Drama"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="5" author="ozakharova">
+        <insert tableName="films">
+            <column name="title_ru" value="Елки"/>
+            <column name="title_en" value="Yolki"/>
+            <column name="year" valueNumeric="2010"/>
+            <column name="duration" valueNumeric="120"/>
+        </insert>
+        <insert tableName="films">
+            <column name="title_ru" value="Брат"/>
+            <column name="title_en" value="Brat"/>
+            <column name="year" valueNumeric="1997"/>
+            <column name="duration" valueNumeric="100"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
