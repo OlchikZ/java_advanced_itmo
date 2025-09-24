@@ -9,6 +9,14 @@ spring:
       mode: always
       schema-locations: classpath:schema.sql
 
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    generate-ddl: false
+
 logging:
   level:
-    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    org.springframework.jdbc.core.JdbcTemplate: ERROR
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql: ERROR
