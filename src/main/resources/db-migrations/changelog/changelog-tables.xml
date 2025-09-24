@@ -11,7 +11,7 @@
             </not>
         </preConditions>
         <createTable tableName="films">
-            <column name="id" type="SERIAL" autoIncrement="true">
+            <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
             <column name="title_ru" type="VARCHAR(255)">
@@ -32,7 +32,7 @@
             </not>
         </preConditions>
         <createTable tableName="genres">
-            <column name="id" type="SERIAL" autoIncrement="true">
+            <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
             <column name="name_ru" type="VARCHAR(255)">
@@ -51,10 +51,10 @@
             </not>
         </preConditions>
         <createTable tableName="film_genres">
-            <column name="film_id" type="INT">
+            <column name="film_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
-            <column name="genre_id" type="INT">
+            <column name="genre_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
