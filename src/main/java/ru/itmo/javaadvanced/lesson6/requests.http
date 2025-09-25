@@ -1,0 +1,21 @@
+### Получить все фильмы
+GET http://localhost:8080/api/films
+
+### Добавить фильм
+POST http://localhost:8080/api/films
+Content-Type: application/json
+
+{
+  "titleRu": "Фильм",
+  "titleEn": "Movie",
+  "year": 2025,
+  "duration": 120
+}
+
+
+{
+  "titleRu": "Фильм",
+  "titleEn": "Movie",
+  "year": 2025,
+  "duration": 0
+}

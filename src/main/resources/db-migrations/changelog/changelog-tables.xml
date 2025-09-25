@@ -1,0 +1,77 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+
+    <changeSet id="1" author="ozakharova">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="films"/>
+            </not>
+        </preConditions>
+        <createTable tableName="films">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title_ru" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title_en" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="year" type="INT"/>
+            <column name="duration" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="ozakharova">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="genres"/>
+            </not>
+        </preConditions>
+        <createTable tableName="genres">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name_ru" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name_en" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="ozakharova">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="film_genres"/>
+            </not>
+        </preConditions>
+        <createTable tableName="film_genres">
+            <column name="film_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="genre_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="film_genres"
+                baseColumnNames="film_id"
+                referencedTableName="films"
+                referencedColumnNames="id"
+                constraintName="fk_film"/>
+
+        <addForeignKeyConstraint
+                baseTableName="film_genres"
+                baseColumnNames="genre_id"
+                referencedTableName="genres"
+                referencedColumnNames="id"
+                constraintName="fk_genre"/>
+    </changeSet>
+
+</databaseChangeLog>
